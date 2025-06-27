@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ლაიქების თამაში</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .logo {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      width: 150px;
+      cursor: pointer;
+      background-color: #fff;
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .logo img {
+      width: 100px;
+      height: 100px;
+    }
+    .like-count {
+      font-weight: bold;
+      color: #444;
+      margin-top: 5px;
+    }
+    #message {
+      display: none;
+      font-size: 20px;
+      color: red;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>აირჩიე საყვარელი ბრენდი და მოიწონე</h1>
+  <input type="text" id="fname" placeholder="სახელი">
+  <input type="text" id="lname" placeholder="გვარი">
+
+  <div class="logo-container">
+    <div class="logo" onclick="showMessage('nazilbe')">
+      <img src="https://via.placeholder.com/100?text=Nazilbe" alt="Nazilbe">
+      <div class="like-count">1001 ლაიქი</div>
+    </div>
+    <div class="logo">
+      <img src="https://via.placeholder.com/100?text=2ნაბიჯი" alt="2ნაბიჯი">
+      <div class="like-count">1012 ლაიქი</div>
+    </div>
+    <div class="logo">
+      <img src="https://via.placeholder.com/100?text=ნიკორა" alt="ნიკორა">
+      <div class="like-count">745 ლაიქი</div>
+    </div>
+    <div class="logo">
+      <img src="https://via.placeholder.com/100?text=დეილი" alt="დეილი">
+      <div class="like-count">800 ლაიქი</div>
+    </div>
+    <div class="logo">
+      <img src="https://via.placeholder.com/100?text=ბილიონი" alt="ბილიონი">
+      <div class="like-count">454 ლაიქი</div>
+    </div>
+  </div>
+
+  <div id="message">
+    🎉 გილოცავთ! თქვენ გახდით ფიშინგის მსხვერპლი 🎣<br>
+    ეს იყო უსაფრთხოების ტესტი — იმედია, შემდეგში უკეთ დაფიქრდებით!
+  </div>
+
+  <script>
+    function showMessage(brand) {
+      if (brand === 'nazilbe') {
+        document.getElementById('message').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
